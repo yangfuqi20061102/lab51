@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>一元二次方程求解</title>
+</head>
+<body>
+    <script>
+        // 1. 循环3次获取系数 a, b, c
+        function getInput(num) {
+            let val = prompt("请输入系数 " + num);
+            return parseFloat(val);
+        }
+
+        let a = getInput("a");
+        let b = getInput("b");
+        let c = getInput("c");
+
+        // 2. 计算判别式 delta
+        let delta = b * b - 4 * a * c;
+
+        // 3. 计算根 x1, x2
+        let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+        let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+
+        // 4. 弹窗显示结果
+        alert("方程的两个根是：\nx1 = " + x1 + "\nx2 = " + x2);
+
+        // 5. 在控制台打印结果 (按F12查看)
+        console.log("x1 =", x1);
+        console.log("x2 =", x2);
+    </script>
+</body>
+</html>
